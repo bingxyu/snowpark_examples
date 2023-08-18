@@ -10,6 +10,8 @@ import plotly.express as px
 # Get the current credentials
 if "snowsession" in st.session_state:
     snf_session = st.session_state['snowsession']
+    data_db = st.session_state['install_db']
+    data_schema = st.session_state['install_schema']
 else:
     st.write("**Please log into you Snowflake account first!**")
     st.stop()
